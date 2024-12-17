@@ -64,3 +64,32 @@ void MyString::setStr(const char* my_str) {
 int MyString::getSize() {
     return size;
 }
+
+void MyString::MyStrcpy(MyString& obj) {
+    delete[] str;
+    size = obj.size;
+    str = new char[size + 1];
+    for (int i = 0; i < size; i++) {
+        str[i] = obj.str[i];
+    }
+    str[size] = '\0';
+}
+
+int MyString::MyChr(char c) {
+    for (int i = 0; i < size; i++) {
+        if (str[i] == c) {
+            return i; 
+        }
+    }
+    return 0; 
+}
+
+int MyString::MyStrLen() {
+    int length = 0;
+    while (str[length] != '\0') { 
+        length++;
+    }
+    return length; 
+}
+
+
