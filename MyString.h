@@ -15,5 +15,8 @@ public:
 
     char* getStr();                    
     void setStr(const char* my_str);   
-    int getSize();                     
+    int getSize();       
+    void MyStrcpy(MyString& obj);    
+    int MyChr(char c); 
+    int MyStrLen();      
 };
